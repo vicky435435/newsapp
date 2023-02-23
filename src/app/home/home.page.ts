@@ -3,6 +3,7 @@ import {SwiperComponent} from "swiper/angular";
 
 // import Swiper core and required modules
 import SwiperCore, {EffectCards}from "swiper";
+import { NewsapiService } from '../newsapi.service';
 
 // install swiper modules
 SwiperCore.use([EffectCards]);
@@ -20,7 +21,7 @@ share() {
 console.log('hellow')
 }
 
-  constructor() {}
+  constructor(public api:NewsapiService) {}
   hide(){
      this.show = !this.show;
   }
